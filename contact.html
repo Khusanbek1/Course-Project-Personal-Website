@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<title>
+Contact    
+</title>
+
+</head>
+
+<body>
+    <div id="top">
+        <h1>Contact Us</h1>
+        <p>Please complete the information below.<br /> 
+            Fields marked with <span class="required">*</span> are required fields.
+        </p>
+    </div>
+    <div id="data">
+        <form action="mailto:sample@gmail.com" method="post">
+            <fieldset>
+                <legend>Your Data</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label>First Name<span class="required">*</span> </label>
+                            <input type="text" required="required" /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Last Name<span class="required">*</span> </label>
+                            <input type="text" required="required" /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Street Address<span class="required">*</span> </label>
+                            <input type="text" required="required" /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>City<span class="required">*</span> </label>
+                            <input type="text" required="required" /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label >Province<span class="required">*</span> </label>
+                            <select name="provinces" required="required">
+                                <option value="" disabled="disabled" selected="selected">Select an option</option>
+                                <option value>AB</option>
+                                <option value>BC</option>
+                                <option value>MB</option>
+                                <option value>NB</option>
+                                <option value>NL</option>
+                                <option value>NT</option>
+                                <option value>NS</option>
+                                <option value>NU</option>
+                                <option value>ON</option>
+                                <option value>PE</option>
+                                <option value>QC</option>
+                                <option value>SK</option>
+                                <option value>YT</option>
+                            </select><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Postal Code<span class="required">*</span> </label>
+                            <input type="text" placeholder="A#A #A#" required="required" /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Email Address<span class="required">*</span> </label>
+                            <input type="email" required="required" /><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Phone Number<span class="required">*</span> </label>
+                            <input type="tel" required="required" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" />
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Agreement</legend>
+                <input type="checkbox" required="required" /><label>Accept Agreement<span class="required">*</span></label>
+                <br />
+                <input type="reset" value="Reset"/>
+                <input type="submit" value="Submit"/>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
