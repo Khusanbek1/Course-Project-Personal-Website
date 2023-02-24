@@ -1,4 +1,8 @@
 
+* {
+    color: darkblue;
+}
+
 #top {
     background-color: #33ff88;
     margin-top: 15px;
@@ -9,9 +13,13 @@
     width: 1000px;
 }
 
+#data {
+    background-color: grey;
+}
+
 fieldset {
     margin-top: 4px;
-    background-color: #8f8e6e;
+    background-color: #bbbbbb;
 }
 
 legend {
@@ -32,8 +40,16 @@ td {
     padding: 2px;
 }
 
+[title*="AC logo"] {
+    border: 3px solid rgb(15, 255, 123);
+}
+
+.category {
+    color: rgb(1, 197, 197);
+}
+
 .required {
-    color: #ffa600;
+    color: #ff0000;
 }
 
 p#data {
