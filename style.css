@@ -3,10 +3,97 @@
     color: darkblue;
 }
 
+/*Custom message on home page*/
+#messageTopRight {
+    font-weight: bold;
+    color: red;
+    text-align: right;
+}
+
+/* navbar styling*/
+.navbar {
+    width: 100%;
+    background-color: lightcyan;
+    overflow: auto;
+}
+  
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.navbar a:hover {
+    background-color: lightblue;
+}
+
+/*
+.active {
+    background-color: #348cff;
+}
+*/
+  
+@media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+    }
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown:hover {
+    background-color: lightblue;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;  
+    border: none;
+    outline: none;
+    color: black;
+    padding: 12px 15px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: lightblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*********/
+
 #top {
-    background-color: #33ff88;
+    background-color: #bbbbbb;
     margin-top: 15px;
-    margin-left: auto;
+    margin-left: 15px;
     margin-right: auto;
     padding-top: 10px;
     border: 2px grey;

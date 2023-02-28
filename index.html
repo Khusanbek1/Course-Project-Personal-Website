@@ -1,0 +1,174 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+<meta charset="UTF-8"/>
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="style.css">
+<title>Home</title> 
+<style>
+    * { 
+        box-sizing: border-box; 
+    } 
+    #myInput { 
+        background-image: url('/css/searchicon.png'); 
+        background-position: 10px 12px; 
+        background-repeat: no-repeat; 
+        width: 100%; 
+        font-size: 16px; 
+        padding: 12px 20px 12px 40px; 
+        border: 1px solid #ddd; 
+        margin-bottom: 12px; 
+    } 
+    #myUL { 
+        list-style-type: none; 
+        padding: 0; 
+        margin: 0; 
+    } 
+    #myUL li a { 
+        border: 1px solid #ddd; 
+        margin-top: -1px; /* Prevent double borders */ 
+        background-color: #f6f6f6; 
+        padding: 12px; 
+        text-decoration: none; 
+        font-size: 18px; 
+        color: black; 
+        display: block 
+    } 
+    #myUL li a:hover:not(.header) { 
+        background-color: #eee; 
+    } 
+</style>
+</head> 
+
+<body> 
+    <!--Navigation bar start -->
+    <div class="navbar">
+        <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <div class="dropdown">
+            <button class="dropbtn">Products 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="currency.php">Currency exchange</a>
+                <a href="#">Service 2</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='contact.html'">Contact Us
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#"><img src="images/france.png" title="France" alt="Flag of France" width="12" height="12"> Contactez-nous</a>
+                <a href="#"><img src="images/japan.png" title="Japan" alt="Flag of Japan" width="12" height="12"> お問い合わせ</a>
+            </div>
+        </div>
+        <a href="aboutme.html"> About</a>
+      </div>
+    <!--Navigation bar end -->
+    <!--Custom welcome message-->
+    <p id="messageTopRight"></p>
+    <p>Welcome to my website. Feel free to search my interests to see if we 
+        share anything in common. 
+    </p>
+    <!--Search functionality-->
+    <h2>Interests</h2> 
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for interests.." title="Type in an
+    interest"> 
+    <ul id="myUL"> 
+        <li><a href="#">Cosmology</a></li> 
+        <li><a href="#">Mars Ingenuity Helicopter</a></li> 
+        <li><a href="#">James Webb Telescope</a></li> 
+        <li><a href="#">Astrobiology</a></li> 
+        <li><a href="#">Astrophysics</a></li> 
+        <li><a href="#">Space exploration</a></li> 
+        <li><a href="#">Nuclear energy</a></li> 
+        <li><a href="#">Voyager spacecraft</a></li> 
+        <li><a href="#">International Space Staton</a></li> 
+        <li><a href="#">Space shuttle</a></li> 
+
+        <li><a href="#">Foundation</a></li> 
+        <li><a href="#">1984</a></li> 
+        <li><a href="#">The War of the Worlds</a></li> 
+        <li><a href="#">The Martian</a></li> 
+        <li><a href="#">Ender's Game</a></li> 
+        <li><a href="#">Starship Troopers</a></li> 
+        <li><a href="#">Hitchhiker's Guide to the Galaxy</a></li> 
+        <li><a href="#">I am Legend</a></li> 
+        <li><a href="#">Cosmos: A Spacetime Odyssey</a></li> 
+        <li><a href="#">Discworld - Death Series</a></li> 
+
+        <li><a href="#">QI</a></li> 
+        <li><a href="#">Big Fat Quiz of The Year</a></li> 
+        <li><a href="#">8 out of 10 Cats</a></li> 
+        <li><a href="#">Would I lie to you</a></li> 
+        <li><a href="#">Taskmaster</a></li> 
+        <li><a href="#">Wipeout</a></li> 
+        <li><a href="#">Hell's Kitchen</a></li> 
+        <li><a href="#">Blackadder</a></li> 
+        <li><a href="#">The Thin Blue Line</a></li> 
+        <li><a href="#">The Great British Bake Off</a></li> 
+
+        <li><a href="#">Iron Chef</a></li> 
+        <li><a href="#">Takeshi's Castle</a></li> 
+        <li><a href="#">Jurassic Park</a></li> 
+        <li><a href="#">Back to the Future</a></li> 
+        <li><a href="#">The Truman Show</a></li> 
+        <li><a href="#">2001: A Space Odyssey</a></li> 
+        <li><a href="#">Fury</a></li> 
+        <li><a href="#">1917</a></li> 
+        <li><a href="#">All Quiet on the Western Front</a></li> 
+        <li><a href="#">Saving Private Ryan</a></li> 
+
+        <li><a href="#">Master and Commander: The Far Side of the World</a></li> 
+        <li><a href="#">The Last of the Mohicans</a></li> 
+        <li><a href="#">Everything Everywhere All At Once</a></li> 
+        <li><a href="#">Forrest Gump</a></li> 
+        <li><a href="#">District 9</a></li> 
+        <li><a href="#">Aliens</a></li> 
+        <li><a href="#">The Shawshank Redemption</a></li> 
+        <li><a href="#">The Lord of the Rings</a></li> 
+        <li><a href="#">Interstellar</a></li> 
+        <li><a href="#">Inception</a></li> 
+    </ul>
+
+    <script>
+    // get current time
+    const date = new Date();
+    const curHour = date.getHours();
+
+    function myFunction() { 
+        var input, filter, ul, li, a, i, txtValue; 
+        input = document.getElementById("myInput"); 
+        filter = input.value.toUpperCase(); 
+        ul = document.getElementById("myUL"); 
+
+        li = ul.getElementsByTagName("li"); 
+        for (i = 0; i < li.length; i++) { 
+            a = li[i].getElementsByTagName("a")[0]; 
+            txtValue = a.textContent || a.innerText; 
+            if (txtValue.toUpperCase().indexOf(filter) > -1) { 
+                li[i].style.display = ""; 
+            } else { 
+                li[i].style.display = "none"; 
+            } 
+        } 
+
+        
+    }
+
+    // time based message
+    if (curHour <= 6 && curHour > 0) {
+        document.getElementById("messageTopRight").innerHTML = "Good morning, must be an early bird!";
+    } else if (curHour > 6 && curHour <= 12) {
+        document.getElementById("messageTopRight").innerHTML = "Good morning";
+    } else if (curHour > 12 && curHour <= 18) {
+        document.getElementById("messageTopRight").innerHTML = "Good afternoon";
+    } else {
+        document.getElementById("messageTopRight").innerHTML = "Good evening";
+    }
+    </script>
+</body> 
+</html> 

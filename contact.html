@@ -4,6 +4,8 @@
 
 <head>
 <meta charset="UTF-8"/>
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="style.css" type="text/css">
 
 <title>
@@ -13,6 +15,32 @@ Contact
 </head>
 
 <body>
+    <!--Navigation bar start -->
+    <div class="navbar">
+        <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+        <div class="dropdown">
+            <button class="dropbtn">Products 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="currency.php">Currency exchange</a>
+              <a href="#">Service 2</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="location.href='contact.html'">Contact Us 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#"><img src="images/france.png" title="France" alt="Flag of France" width="12" height="12"> Contactez-nous</a>
+              <a href="#"><img src="images/japan.png" title="Japan" alt="Flag of Japan" width="12" height="12"> お問い合わせ</a>
+            </div>
+        </div>
+        <a href="aboutme.html"> About</a>
+      </div>
+      <!--Navigation bar end -->
+
+
     <div id="top">
         <h1>Contact Us</h1>
         <p>Please complete the information below.<br /> 
